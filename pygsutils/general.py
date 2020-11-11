@@ -4,6 +4,7 @@ import logging
 import requests
 import os
 import zipfile
+from functools import wraps
 
 
 def setup_logging(fp: str) -> None:
@@ -40,3 +41,13 @@ def extract_zip(path_to_zip, dest_folder):
         os.makedirs(folderpath)
     with zipfile.ZipFile(path_to_zip, "r") as zip_ref:
         zip_ref.extractall(folderpath)
+
+def log_exception(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        try:
+            func(*args, **kwargs)
+        except:
+            logging.exception(20*"-")
+            raise
+    return wrapper
