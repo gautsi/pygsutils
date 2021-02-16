@@ -1,4 +1,4 @@
 # pygsutils
-https://gautsi.github.io/pygsutils/home.html
+https://gautsi.github.io/pygsutils/content/home.html
 
 General python utility functions
