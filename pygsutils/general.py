@@ -52,8 +52,8 @@ def log_exception(func):
 
 def make_dir(dir_or_func:Union[str, Callable]) -> Union[None, Callable]:
     if type(dir_or_func) is str:
-        if not os.path.exists(dir):
-            os.makedirs(dir)
+        if not os.path.exists(dir_or_func):
+            os.makedirs(dir_or_func)
     elif callable(dir_or_func):
         @wraps(dir_or_func)
         def wrapper(*args, **kwargs):
