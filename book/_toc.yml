@@ -1,0 +1,6 @@
+- file: content/home
+
+- part: Caching
+  chapters:
+  - file: content/caching/intro
+  - file: content/caching/test

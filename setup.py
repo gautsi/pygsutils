@@ -10,5 +10,5 @@ setuptools.setup(
     author="Gautam Sisodia",
     packages=setuptools.find_packages(),
     classifiers=["Progamming Language :: Python :: 3"],
-    install_requires=["pandas"],
+    install_requires=["pandas==1.2.2", ""],
 )
