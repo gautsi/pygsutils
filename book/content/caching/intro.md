@@ -5,4 +5,4 @@ I often have to prepare data before analysis, and this can get complicated with 
 - is persistent across kernel restarts, and
 - doesn't require a lot of boilerplate code.
 
-Searching around for a solution lead me to [diskcache](http://www.grantjenks.com/docs/diskcache/index.html). 
+Inspired by [diskcache](http://www.grantjenks.com/docs/diskcache/index.html), the cache module implements a simple dataframe cacher that caches dataframes as csvs to disk. 
